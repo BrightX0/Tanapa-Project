@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../Variables/AppStrings.dart';
 import '../Components/CustomTextView.dart';
@@ -19,9 +20,9 @@ class AuthenticationView extends StatelessWidget {
             children: [
               Image.asset(AppStrings.imageAssetsLogo),
               const SizedBox(height: 70),
-              const CustomTextView(),
+              const CustomTextView(labelText: "UserName",hintText: "Please Provide Username To Continue",prefixIcon: Icons.account_circle_rounded,),
               const SizedBox(height: 15),
-              const CustomTextView(),
+              const CustomTextView(labelText: "Password",hintText: "Enter Password Field To Continue",prefixIcon: Icons.password,),
               const SizedBox(
                 height: 50,
               ),
@@ -30,12 +31,11 @@ class AuthenticationView extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green[700],
                     minimumSize: const Size(double.infinity, 50)),
-                child: const Text(
+                child: Text(
                   "Sign in",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 20),
                 ),
               ),
-
               const SizedBox(height: 40),
               Center(
                 child: RichText(
@@ -47,13 +47,10 @@ class AuthenticationView extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                            },
+                          recognizer: TapGestureRecognizer()..onTap = () {},
                           text: "Password ?",
                           style: const TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold),
+                              color: Colors.green, fontWeight: FontWeight.bold),
                         ),
                       ]),
                 ),
