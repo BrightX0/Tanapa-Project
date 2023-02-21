@@ -10,8 +10,13 @@ class AppTheme {
       fillColor: Colors.green,
       prefixIconColor: Colors.green[700],
       enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.green)
+        borderSide: BorderSide(color: Colors.green),
       ),
+      disabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.green),
+      ),
+      focusedBorder:
+          const OutlineInputBorder(borderSide: BorderSide(color: Colors.green)),
       border: const OutlineInputBorder(),
     ),
   );

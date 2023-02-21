@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tanapa/Views/Themes/Theme.dart';
 
 import 'Views/Screens/Authentication.dart';
@@ -12,9 +13,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: AppTheme.apptheme1,
-      home: AuthenticationView(),
+      home: const AuthenticationView(),
     );
   }
 }

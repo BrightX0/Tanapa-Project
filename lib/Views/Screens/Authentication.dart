@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tanapa/Views/Screens/homePage.dart';
 
 import '../../Variables/AppStrings.dart';
 import '../Components/CustomTextView.dart';
@@ -20,14 +22,22 @@ class AuthenticationView extends StatelessWidget {
             children: [
               Image.asset(AppStrings.imageAssetsLogo),
               const SizedBox(height: 70),
-              const CustomTextView(labelText: "UserName",hintText: "Please Provide Username To Continue",prefixIcon: Icons.account_circle_rounded,),
+              const CustomTextView(
+                labelText: "UserName",
+                hintText: "Please Provide Username To Continue",
+                prefixIcon: Icons.account_circle_rounded,
+              ),
               const SizedBox(height: 15),
-              const CustomTextView(labelText: "Password",hintText: "Enter Password Field To Continue",prefixIcon: Icons.password,),
+              const CustomTextView(
+                labelText: "Password",
+                hintText: "Enter Password Field To Continue",
+                prefixIcon: Icons.password,
+              ),
               const SizedBox(
                 height: 50,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(()=> const HompePage()),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green[700],
                     minimumSize: const Size(double.infinity, 50)),
