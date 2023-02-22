@@ -20,7 +20,7 @@ class AuthenticationView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset(AppStrings.imageAssetsLogo),
+              Image.asset(AppStrings.imageAssetsLogo2),
               const SizedBox(height: 70),
               const CustomTextView(
                 labelText: "UserName",
@@ -37,7 +37,7 @@ class AuthenticationView extends StatelessWidget {
                 height: 50,
               ),
               ElevatedButton(
-                onPressed: () => Get.to(()=> const HompePage()),
+                onPressed: () => Get.to(() => const HompePage()),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green[700],
                     minimumSize: const Size(double.infinity, 50)),
