@@ -21,13 +21,13 @@ class AuthenticationView extends StatelessWidget {
             children: [
               Image.asset(AppStrings.imageAssetsLogo),
               const SizedBox(height: 70),
-              const CustomTextView(
+              CustomTextView(
                 labelText: "UserName",
                 hintText: "Please Provide Username To Continue",
                 prefixIcon: Icons.account_circle_rounded,
               ),
               const SizedBox(height: 15),
-              const CustomTextView(
+              CustomTextView(
                 labelText: "Password",
                 hintText: "Enter Password Field To Continue",
                 prefixIcon: Icons.password,

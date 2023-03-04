@@ -1,7 +1,41 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tanapa/Views/Components/customButtonTile.dart';
 import 'package:tanapa/Views/Components/customListTileForm.dart';
+
+class ShughuliZaKikundiModal {
+  static late String JINA_LA_KIKUNDI,
+      NAMBA_YA_KIKUNDI,
+      HISA,
+      ADHABU,
+      AFYA,
+      ELIMU,
+      MAZINGIRA,
+      ZAWADI,
+      MIKOPO,
+      NYONGEZA_YA_MIKOPO,
+      BIMA_YA_MKOPO,
+      MAPATO_MENGINEYO;
+
+  static Map<String, String> toJson() {
+    return {
+      'JINA_LA_KIKUNDI': JINA_LA_KIKUNDI,
+      'NAMBA_YA_KIKUNDI': NAMBA_YA_KIKUNDI,
+      'HISA': HISA,
+      'ADHABU': ADHABU,
+      'AFYA': AFYA,
+      'ELIMU': ELIMU,
+      'MAZINGIRA': MAZINGIRA,
+      "ZAWADI": ZAWADI,
+      "MIKOPO": MIKOPO,
+      'NYONGEZA_YA_MIKOPO': NYONGEZA_YA_MIKOPO,
+      'BIMA_YA_MKOPO': BIMA_YA_MKOPO,
+      'MAPATO_MENGINEYO': MAPATO_MENGINEYO
+    };
+  }
+}
 
 class ShughuliZaKikundi extends StatelessWidget {
   const ShughuliZaKikundi({super.key});

@@ -3,6 +3,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tanapa/Views/Components/customButtonTile.dart';
 import 'package:tanapa/Views/Components/customListTileForm.dart';
 
+class HisaZaWanaChamaModal {
+  static late String MZUNGUKO, THAMANIYAHISA, HISAZILIZOWEKWA, SALIO_ANZIA, SALIO_ISHIA;
+
+  static Map<String, String> toJson() {
+    return {
+      'MZUNGUKO':MZUNGUKO,
+      'TAREHE':THAMANIYAHISA,
+      'HISAZILIZOWEKWA':HISAZILIZOWEKWA,
+      'SALIO_ANZIA':SALIO_ANZIA,
+      'SALIO_ISHIA':SALIO_ISHIA
+    };
+  }
+}
 class HisaZaWanaChama extends StatelessWidget {
   const HisaZaWanaChama({super.key});
 

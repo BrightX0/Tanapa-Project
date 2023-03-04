@@ -7,15 +7,20 @@ class CustomTextView extends StatelessWidget {
   final IconData prefixIcon;
   final bool expands;
 
-  const CustomTextView(
+  CustomTextView(
       {super.key,
       required this.labelText,
       required this.hintText,
-      required this.prefixIcon, this.isDense=false, this.expands = false});
+      required this.prefixIcon,
+      this.isDense = false,
+      this.expands = false});
+
+  final TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: textEditingController,
       maxLines: null,
       expands: expands,
       autocorrect: true,
@@ -27,4 +32,5 @@ class CustomTextView extends StatelessWidget {
       ),
     );
   }
+
 }
