@@ -3,8 +3,16 @@ import 'package:get/get.dart';
 import 'package:tanapa/Views/Themes/Theme.dart';
 
 import 'Views/Screens/Authentication.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MainApp());
 }
 

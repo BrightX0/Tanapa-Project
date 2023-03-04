@@ -11,7 +11,6 @@ class CustomTextView extends StatelessWidget {
       {super.key,
       required this.labelText,
       required this.hintText,
-      
       required this.prefixIcon, this.isDense=false, this.expands = false});
 
   @override

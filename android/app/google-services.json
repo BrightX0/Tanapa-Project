@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "337198593597",
+    "project_id": "tanapa-a7da5",
+    "storage_bucket": "tanapa-a7da5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337198593597:android:8152504e3ea27325b4dc54",
+        "android_client_info": {
+          "package_name": "com.example.tanapa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337198593597-pb567v497hkucog0m0mloao7hj2kjt80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMruYX_PPhEe8onaBA9DJNHjKzDCHh2B0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337198593597-pb567v497hkucog0m0mloao7hj2kjt80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static ThemeData apptheme1 = ThemeData(
+    backgroundColor: Colors.grey,
     useMaterial3: true,
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.green[700],
@@ -19,5 +20,6 @@ class AppTheme {
           const OutlineInputBorder(borderSide: BorderSide(color: Colors.green)),
       border: const OutlineInputBorder(),
     ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.green[700])
   );
 }

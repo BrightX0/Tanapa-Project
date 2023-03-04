@@ -1,12 +1,61 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tanapa/Views/Components/customListTileForm.dart';
-import 'package:tanapa/Views/Components/customListTileGroup.dart';
-import 'package:tanapa/Views/Components/customMessageTile.dart';
+import 'package:tanapa/Views/Components/customButtonTile.dart';
 
+import '../../Components/customListTileForm.dart';
+import '../../Components/customListTileGroup.dart';
+import '../../Components/customMessageTile.dart';
 
-class HompePage extends StatelessWidget {
-  const HompePage({super.key});
+class FormZaTaarifaModal {
+  static late String JINA_LA_KIKUNDI;
+  static late String NAMBA_YA_USAJILI;
+  static late String JINA_LA_KIJIJI;
+  static late String JINA_LA_KATA;
+  static late String IDADI_YA_WANACHAMA_WA_KIUME;
+  static late String IDADI_YA_WANACHAMA_WA_KIKE;
+  static late String ASIMILIA_KWA_MWEZI;
+  static late String BEIYAMKOPO;
+  static late String MTAJIWAKIKUNDI;
+  static late String KIASI_CHA_MAREJESHO_KWA_MWEZI;
+  static late String KIWANGO_CHA_MKOPO_WAJUU_KUTOLEWA;
+  static late String IDADI_YA_WANACHAMA_WALIOKOPESHWA;
+  static late String IDADI_YA_MIRADI_PAMOJA;
+  static late String MTU_ALIWATEMBELEA = 'NDIYO';
+  static late String JINA_LA_ALIYETEMBELEA;
+  static late String MAFUNZO_YOYOTE_MLIYOPATA = "NDIYO";
+  static late String JINA_LA_ALIYOWAFUNDISHA;
+  static late String CHANGAMOTO_NYINGINE;
+  static late String TOAMAONIYAKO;
+
+  static Map<String, String> toJSON() {
+    return {
+      "JINA_LA_KIKUNDI": JINA_LA_KIKUNDI,
+      "NAMBA_YA_USAJILI": NAMBA_YA_USAJILI,
+      "JINA_LA_KIJIJI": JINA_LA_KIJIJI,
+      "JINA_LA_KATA": JINA_LA_KATA,
+      "IDADI_YA_WANACHAMA_WA_KIUME": IDADI_YA_WANACHAMA_WA_KIUME,
+      'IDADI_YA_WANACHAMA_WA_KIKE': IDADI_YA_WANACHAMA_WA_KIKE,
+      "ASIMILIA_KWA_MWEZI": ASIMILIA_KWA_MWEZI,
+      "BEIYAMKOPO": BEIYAMKOPO,
+      "MTAJIWAKIKUNDI": MTAJIWAKIKUNDI,
+      "KIASI_CHA_MAREJESHO_KWA_MWEZI": KIASI_CHA_MAREJESHO_KWA_MWEZI,
+      "KIWANGO_CHA_MKOPO_WAJUU_KUTOLEWA": KIWANGO_CHA_MKOPO_WAJUU_KUTOLEWA,
+      "IDADI_YA_WANACHAMA_WALIOKOPESHWA": IDADI_YA_WANACHAMA_WALIOKOPESHWA,
+      "IDADI_YA_MIRADI_PAMOJA": IDADI_YA_MIRADI_PAMOJA,
+      'MTU_ALIWATEMBELEA': MTU_ALIWATEMBELEA,
+      'JINA_LA_ALIYETEMBELEA': JINA_LA_ALIYETEMBELEA,
+      'MAFUNZO_YOYOTE_MLIYOPATA':MAFUNZO_YOYOTE_MLIYOPATA,
+      'JINA_LA_ALIYOWAFUNDISHA':JINA_LA_ALIYOWAFUNDISHA,
+      'CHANGAMOTO_NYINGINE':CHANGAMOTO_NYINGINE,
+      'TOAMAONIYAKO':TOAMAONIYAKO,
+    };
+  }
+}
+
+class FormZaTaarifa extends StatelessWidget {
+  const FormZaTaarifa({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -97,25 +146,14 @@ class HompePage extends StatelessWidget {
               subtitle: 'Ingiza jina kamili'),
           const customTextTileMessage(
               title: 'Kuna changamoto zozote zitaje', subtitle: 'Changamoto'),
-              const customTextTileMessage(
+          const customTextTileMessage(
               title: 'Toa maoni yako', subtitle: 'Maoni'),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: Colors.green[700],
-                  minimumSize: const Size(200, 60)),
-              child: Text(
-                "Tuma Taarifa",
-                style: GoogleFonts.poppins(color: Colors.white, fontSize: 20),
-              ),
-            ),
+          customButtonTile(
+            buttonText: "Tuma taarifa",
+            onPressed: () {},
           ),
           const SizedBox(
-            height: 50,
+            height: 10,
           )
         ],
       ),

@@ -12,7 +12,7 @@ class customListTileForm extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.only(left:5,top: 7,bottom: 10),
+          padding: const EdgeInsets.only(left:5,top: 10,bottom: 10),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(5),
@@ -26,7 +26,7 @@ class customListTileForm extends StatelessWidget {
           child: ListTile(
             style: ListTileStyle.drawer,
             title: Padding(
-              padding: const EdgeInsets.only(bottom: 13, left: 5),
+              padding: const EdgeInsets.only(bottom: 20, left: 5),
               child: Text(
                 title,
                 style:
@@ -41,7 +41,7 @@ class customListTileForm extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height:1.7,)
+        const SizedBox(height:5.0,)
       ],
     );
   }

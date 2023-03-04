@@ -46,7 +46,7 @@ class customTextTileMessage extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 1.7,
+          height: 10.0,
         )
       ],
     );
