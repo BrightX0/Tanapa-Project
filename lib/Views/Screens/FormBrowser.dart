@@ -1,10 +1,12 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tanapa/Views/Screens/FormsScreens/HisaZaJamii.dart';
-import 'package:tanapa/Views/Screens/FormsScreens/HisaZaWanaChama.dart';
-import 'package:tanapa/Views/Screens/FormsScreens/KumalizaMzunguko.dart';
-import 'package:tanapa/Views/Screens/FormsScreens/ShughuliZaKikundi.dart';
+import 'FormHistory.dart';
+import 'FormsScreens/HisaZaJamii.dart';
+import 'FormsScreens/HisaZaWanaChama.dart';
+import 'FormsScreens/KumalizaMzunguko.dart';
+import 'FormsScreens/ShughuliZaKikundi.dart';
 import '../Components/FormDetailCardTile.dart';
 import 'FormsScreens/FormZaTaarifa.dart';
 
@@ -50,14 +52,14 @@ class FormBrowser extends StatelessWidget {
             userHelpMessage: "Taarifa Fupi ya Shughuli ya Kikundi za Kila wiki",
           ),
           FormDetailCardTile(
-            onClick: () => Get.to(() => HisaZaWanaChama()),
+            onClick: () => Get.to(() => const HisaZaWanaChama()),
             iconData: Icons.paste,
             descrption: 'Hisa za Wanachama',
             content: 'Mzunguko wa 1',
             userHelpMessage: "Taarifa Fupi ya Shughuli ya Kikundi za Kila wiki",
           ),
           FormDetailCardTile(
-            onClick: () => Get.to(() => HisaZajamii()),
+            onClick: () => Get.to(() => const HisaZajamii()),
             iconData: Icons.paste,
             descrption: 'Mfuko Wa\nJamii',
             content: 'Mzunguko wa 1',
@@ -79,13 +81,20 @@ class FormBrowser extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-      ),
+      floatingActionButton: OpenContainer(
+            transitionType: ContainerTransitionType.fade,
+            transitionDuration: 500.milliseconds,
+            closedBuilder: (context, action) {
+              return FloatingActionButton(
+                  elevation: 0.0,
+                  onPressed: action,
+                  backgroundColor: Colors.green,
+                  child: const Icon(Icons.history, color: Colors.white));
+            },
+            openBuilder: (context, action) {
+              return const FormsHistory();
+            },
+          ),
     );
   }
 }

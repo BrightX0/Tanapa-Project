@@ -7,18 +7,18 @@ import 'package:tanapa/Views/Components/customButtonTile.dart';
 import 'package:tanapa/Views/Components/customListTileForm.dart';
 
 class ShughuliZaKikundiModal {
-  static late TextEditingController JINA_LA_KIKUNDI,
-      NAMBA_YA_KIKUNDI,
-      HISA,
-      ADHABU,
-      AFYA,
-      ELIMU,
-      MAZINGIRA,
-      ZAWADI,
-      MIKOPO,
-      NYONGEZA_YA_MIKOPO,
-      BIMA_YA_MKOPO,
-      MAPATO_MENGINEYO;
+  static final TextEditingController JINA_LA_KIKUNDI = TextEditingController(),
+      NAMBA_YA_KIKUNDI = TextEditingController(),
+      HISA = TextEditingController(),
+      ADHABU = TextEditingController(),
+      AFYA = TextEditingController(),
+      ELIMU = TextEditingController(),
+      MAZINGIRA = TextEditingController(),
+      ZAWADI = TextEditingController(),
+      MIKOPO = TextEditingController(),
+      NYONGEZA_YA_MIKOPO = TextEditingController(),
+      BIMA_YA_MKOPO = TextEditingController(),
+      MAPATO_MENGINEYO = TextEditingController();
 
   static Map<String, String> toJson() {
     return {
@@ -64,84 +64,101 @@ class ShughuliZaKikundi extends StatelessWidget {
         body: ListView(
           children: [
             customListTileForm(
-              textEditingController: ShughuliZaKikundiModal.JINA_LA_KIKUNDI,
+                textEditingController: ShughuliZaKikundiModal.JINA_LA_KIKUNDI,
                 title: "Jina La KiKundi",
                 subtitle: 'Ingiza Jina Kamili La Kikundi'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.NAMBA_YA_KIKUNDI,
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.NAMBA_YA_KIKUNDI,
                 title: "Namba ya KiKundi",
                 subtitle: 'Ingiza Namba Kamili ya Kikundi'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.HISA,
-                title: 'Hisa', subtitle: "Kiasi Cha Fedha Zilizokusanywa"),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.ADHABU,
-                title: 'Adhabu', subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.AFYA,
-                title: "Afya", subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.ELIMU,
-                title: 'Elimu', subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.MAZINGIRA,
-                title: 'Mazingira', subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.ZAWADI,
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.HISA,
+                title: 'Hisa',
+                subtitle: "Kiasi Cha Fedha Zilizokusanywa"),
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.ADHABU,
+                title: 'Adhabu',
+                subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.AFYA,
+                title: "Afya",
+                subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.ELIMU,
+                title: 'Elimu',
+                subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.MAZINGIRA,
+                title: 'Mazingira',
+                subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.ZAWADI,
                 title: 'Zawadi/Ruzuku',
                 subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.MIKOPO,
-                title: 'Mikopo', subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.NYONGEZA_YA_MIKOPO,
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.MIKOPO,
+                title: 'Mikopo',
+                subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
+            customListTileForm(
+                textEditingController:
+                    ShughuliZaKikundiModal.NYONGEZA_YA_MIKOPO,
                 title: 'Nyongeza Ya Mikopo',
                 subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.BIMA_YA_MKOPO,
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.BIMA_YA_MKOPO,
                 title: 'Bima ya Mkopo',
                 subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
-            customListTileForm(textEditingController: ShughuliZaKikundiModal.MAPATO_MENGINEYO,
+            customListTileForm(
+                textEditingController: ShughuliZaKikundiModal.MAPATO_MENGINEYO,
                 title: "Mapato Mengineyo",
                 subtitle: 'Kiasi Cha Fedha Zilizokusanywa'),
             customButtonTile(
               buttonText: "Tuma Taarifa",
               onPressed: () {
-                                            showDialog(
-                  // The user CANNOT close this dialog  by pressing outsite it
-                  barrierDismissible: false,
-                  context: context,
-                  builder: (_) {
-                    return Dialog(
-                      // The background color
-                      backgroundColor: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: SizedBox(
-                          width: 300,
-                          height: 120,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              // The loading indicator
-                              Text(
-                                'Taarifa Subiri Tukiwa Tunatuma na\nkuhifadhi Taarifa',
-                                style: GoogleFonts.openSans(fontSize: 17),
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              // Some text
-                              CircularProgressIndicator(
-                                color: Colors.green[700],
-                              )
-                            ],
+                showDialog(
+                    // The user CANNOT close this dialog  by pressing outsite it
+                    barrierDismissible: false,
+                    context: context,
+                    builder: (_) {
+                      return Dialog(
+                        // The background color
+                        backgroundColor: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: SizedBox(
+                            width: 300,
+                            height: 120,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                // The loading indicator
+                                Text(
+                                  'Taarifa Subiri Tukiwa Tunatuma na\nkuhifadhi Taarifa',
+                                  style: GoogleFonts.openSans(fontSize: 17),
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                // Some text
+                                CircularProgressIndicator(
+                                  color: Colors.green[700],
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    );
-                  });
+                      );
+                    });
+                FirebaseFirestore.instance
+                    .collection('FOMU ZA SHUGHULI ZA KIKUNDI')
+                    .add(ShughuliZaKikundiModal.toJson())
+                    .then((value) {
+                  // removing the Dialog Builder....
+                  Navigator.pop(context);
 
-              FirebaseFirestore.instance
-                  .collection('FOMU ZA SHUGHULI ZA KIKUNDI')
-                  .add(ShughuliZaKikundiModal.toJson())
-                  .then((value) {
-                // removing the Dialog Builder....
-                Navigator.pop(context);
-
-                // AndGoing Back more...
-                Navigator.pop(context);
-              });
+                  // AndGoing Back more...
+                  Navigator.pop(context);
+                });
               },
             ),
             const SizedBox(

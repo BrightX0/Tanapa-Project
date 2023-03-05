@@ -8,7 +8,7 @@ import '../../Components/customButtonTile.dart';
 import '../../Components/customListTileForm.dart';
 
 class KumalizaMzungukoModal {
-  static late TextEditingController JINA_LA_MWANACHAMA,
+  static final TextEditingController JINA_LA_MWANACHAMA = TextEditingController(),
       HISA = TextEditingController(),
       AFYA = TextEditingController(),
       ELIMU = TextEditingController(),
@@ -22,12 +22,12 @@ class KumalizaMzungukoModal {
     return {
       "JINA_LA_MWANACHAMA": JINA_LA_MWANACHAMA.text,
       'HISA': HISA.text,
-      "ELIMU":ELIMU.text,
-      "MAZINGIRA":MAZINGIRA.text,
-      "MADENI":MADENI.text,
-      "GAWIO":GAWIO.text,
-      "SALIO":SALIO.text,
-      "SALIO_ISHIA":SALIO_ISHIA.text
+      "ELIMU": ELIMU.text,
+      "MAZINGIRA": MAZINGIRA.text,
+      "MADENI": MADENI.text,
+      "GAWIO": GAWIO.text,
+      "SALIO": SALIO.text,
+      "SALIO_ISHIA": SALIO_ISHIA.text
     };
   }
 }
@@ -56,31 +56,46 @@ class KumalizaMzunguko extends StatelessWidget {
       body: ListView(
         children: [
           customListTileForm(
-            textEditingController: KumalizaMzungukoModal.JINA_LA_MWANACHAMA,
+              textEditingController: KumalizaMzungukoModal.JINA_LA_MWANACHAMA,
               title: 'Jina la mwanachama',
               subtitle: 'Ingiza Jina la mwanachama'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.HISA,
-              title: 'Hisa', subtitle: 'Thamani ya Hisa ya MwanaaChama'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.AFYA,
-              title: 'Afya', subtitle: 'Thamani ya Mfuko Wa Jamii'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.ELIMU,
-              title: 'Elimu', subtitle: 'Thamani ya Mfuko Wa Jamii'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.MAZINGIRA,
-              title: 'Mazingira', subtitle: 'Thamani ya Mfuko Wa Jamii'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.MADENI,
-              title: 'Madeni', subtitle: 'Madeni ya MwanaChama'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.GAWIO,
-              title: 'Gawio', subtitle: 'Gawio la MwanaChama'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.SALIO,
-              title: 'Salio', subtitle: 'Salio la MwanaChama'),
-          customListTileForm(textEditingController: KumalizaMzungukoModal.SALIO_ISHIA,
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.HISA,
+              title: 'Hisa',
+              subtitle: 'Thamani ya Hisa ya MwanaaChama'),
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.AFYA,
+              title: 'Afya',
+              subtitle: 'Thamani ya Mfuko Wa Jamii'),
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.ELIMU,
+              title: 'Elimu',
+              subtitle: 'Thamani ya Mfuko Wa Jamii'),
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.MAZINGIRA,
+              title: 'Mazingira',
+              subtitle: 'Thamani ya Mfuko Wa Jamii'),
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.MADENI,
+              title: 'Madeni',
+              subtitle: 'Madeni ya MwanaChama'),
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.GAWIO,
+              title: 'Gawio',
+              subtitle: 'Gawio la MwanaChama'),
+          customListTileForm(
+              textEditingController: KumalizaMzungukoModal.SALIO,
+              title: 'Salio',
+              subtitle: 'Salio la MwanaChama'),
+          customListTileForm(
+            textEditingController: KumalizaMzungukoModal.SALIO_ISHIA,
             title: 'Salio ishia',
             subtitle: 'Salio Lililoishia',
           ),
           customButtonTile(
             buttonText: "Tuma Taarifa",
             onPressed: () {
-                            showDialog(
+              showDialog(
                   // The user CANNOT close this dialog  by pressing outsite it
                   barrierDismissible: false,
                   context: context,
