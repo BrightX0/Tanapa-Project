@@ -4,8 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'CustomTextView.dart';
 
 class customTextTileMessage extends StatelessWidget {
-  final String title,subtitle;
-  const customTextTileMessage({super.key, required this.title, required this.subtitle});
+  final TextEditingController textEditingController;
+  final String title, subtitle;
+  const customTextTileMessage(
+      {super.key, required this.title, required this.subtitle, required this.textEditingController});
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ class customTextTileMessage extends StatelessWidget {
             subtitle: SizedBox(
               height: 200,
               child: CustomTextView(
+                textEditingController: textEditingController,
                 expands: true,
                 isDense: false,
                 labelText: subtitle,

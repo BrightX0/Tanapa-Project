@@ -3,16 +3,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tanapa/Views/Components/CustomTextView.dart';
 
 class customListTileForm extends StatelessWidget {
+  final TextEditingController? textEditingController;
   final String title, subtitle;
   const customListTileForm(
-      {super.key, required this.title, required this.subtitle});
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      this.textEditingController});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.only(left:5,top: 10,bottom: 10),
+          padding: const EdgeInsets.only(left: 5, top: 10, bottom: 10),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(5),
@@ -29,11 +33,12 @@ class customListTileForm extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 20, left: 5),
               child: Text(
                 title,
-                style:
-                    GoogleFonts.openSans(fontSize: 20, fontWeight: FontWeight.w700),
+                style: GoogleFonts.openSans(
+                    fontSize: 20, fontWeight: FontWeight.w700),
               ),
             ),
             subtitle: CustomTextView(
+              textEditingController: textEditingController,
               isDense: true,
               labelText: subtitle,
               hintText: subtitle,
@@ -41,7 +46,9 @@ class customListTileForm extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height:5.0,)
+        const SizedBox(
+          height: 5.0,
+        )
       ],
     );
   }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextView extends StatelessWidget {
   final String labelText, hintText;
-
+  final TextEditingController? textEditingController;
   final bool isDense;
   final IconData prefixIcon;
   final bool expands;
@@ -13,9 +13,7 @@ class CustomTextView extends StatelessWidget {
       required this.hintText,
       required this.prefixIcon,
       this.isDense = false,
-      this.expands = false});
-
-  final TextEditingController textEditingController = TextEditingController();
+      this.expands = false, this.textEditingController});
 
   @override
   Widget build(BuildContext context) {
@@ -32,5 +30,4 @@ class CustomTextView extends StatelessWidget {
       ),
     );
   }
-
 }
